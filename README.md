@@ -1,4 +1,3 @@
 # My Nixos dotfiles
 
-Current config
-TODO: integrate nvim config with home-manager
+TODO: migrate nvim config & some non-system packages to home-manager
