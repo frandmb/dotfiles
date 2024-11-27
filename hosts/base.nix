@@ -102,7 +102,10 @@
   };
   programs.virt-manager.enable = true;
 
-  programs.appimage.binfmt = true;
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
   services.flatpak.enable = true;
 
   # This value determines the NixOS release from which the default
