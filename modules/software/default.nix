@@ -25,7 +25,6 @@
     deno
     python3
     just
-    appimage-run
   ];
 
   programs.neovim = {
