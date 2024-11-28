@@ -25,6 +25,7 @@
     deno
     python3
     just
+    openscad
   ];
 
   programs.neovim = {

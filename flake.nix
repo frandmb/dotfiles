@@ -22,7 +22,7 @@
       sysModules = [
         /etc/nixos/hardware-configuration.nix
         ./hosts/base.nix
-        ./modules/keyd.nix
+        ./modules/key-remap.nix
         ./modules/software/default.nix
         ./modules/fhs-compat.nix
       ];

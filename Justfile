@@ -1,5 +1,5 @@
-# sudo just update desktop
-update host:
+# sudo just deploy desktop
+build host:
   nixos-rebuild switch --flake .#{{host}} --impure
 
 up:
@@ -9,3 +9,6 @@ up:
 # usage: make upp {{home-manager}}
 upp home-manager:
   nix flake update {{home-manager}}
+
+cleanup:
+  nix-collect-garbage --delete-older-than 7d
