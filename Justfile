@@ -2,6 +2,9 @@
 build host:
   nixos-rebuild switch --flake .#{{host}} --impure
 
+build-home:
+  home-manager switch --flake .
+
 up:
   nix flake update
 
@@ -9,8 +12,6 @@ up:
 upp flake-url:
   nix flake update {{flake-url}}
 
-build-home:
-  home-manager switch --flake .
 
 cleanup:
   nix-collect-garbage --delete-older-than 7d
