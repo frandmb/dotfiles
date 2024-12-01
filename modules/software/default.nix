@@ -1,9 +1,6 @@
 { pkgs, config, ... }:
 
 {
-  programs.firefox.enable = false;
-  programs.gnome-disks.enable = true;
-  programs.kdeconnect.enable = true;
   environment.systemPackages = with pkgs; [
     ffmpeg-full
     tpm2-tss
@@ -11,11 +8,6 @@
     distrobox
     wget
     gcc
-    alacritty
-    lazygit
-    ripgrep
-    fd
-    kitty
     kdePackages.plasma-thunderbolt
     nixfmt-rfc-style
     cargo
@@ -24,12 +16,16 @@
     wl-clipboard
     deno
     python3
-    just
-    openscad
+    alsa-utils
   ];
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
+  programs = {
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+    };
+    firefox.enable = false;
+    gnome-disks.enable = true;
+    kdeconnect.enable = true;
   };
 }
