@@ -12,7 +12,7 @@
     kitty
     just
     linux-wifi-hotspot
-    orca-slicer
+    #orca-slicer
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
