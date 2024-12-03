@@ -1,6 +1,16 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
+  nixpkgs.overlays = [
+    (final: prev: {
+      orca-slicer = inputs.nixos-unstable-small.legacyPackages.${prev.system}.orca-slicer;
+    })
+  ];
   home.username = "fran";
   home.homeDirectory = "/home/fran";
 

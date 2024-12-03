@@ -8,9 +8,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-unstable-small = {
+      url = "github:nixos/nixpkgs/nixos-unstable-small";
+    };
   };
   outputs =
-    {
+    inputs@{
       self,
       nixpkgs,
       home-manager,
@@ -32,6 +35,9 @@
         # sudo nixos-rebuild switch --flake .#desktop
         desktop = nixpkgs.lib.nixosSystem {
           inherit system;
+          specialArgs = {
+            inherit inputs;
+          };
           modules = sysModules ++ [
             ./hosts/desktop/config.nix
           ];
@@ -40,6 +46,9 @@
         # sudo nixos-rebuild switch --flake .#thinkpad
         thinkpad = nixpkgs.lib.nixosSystem {
           inherit system;
+          specialArgs = {
+            inherit inputs;
+          };
           modules = sysModules ++ [
             ./hosts/thinkpad/config.nix
           ];
@@ -50,6 +59,9 @@
         fran = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [ ./home/home.nix ];
+          extraSpecialArgs = {
+            inherit inputs;
+          };
         };
       };
     };
