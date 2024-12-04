@@ -31,10 +31,7 @@
     }:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
+      pkgs = nixpkgs.legacyPackages.${system};
       sysModules = [
         /etc/nixos/hardware-configuration.nix
         ./hosts/base.nix
@@ -48,7 +45,6 @@
         # sudo nixos-rebuild switch --flake .#fran-desktop
         fran-desktop = nixpkgs.lib.nixosSystem {
           inherit system;
-          inherit pkgs;
           specialArgs = {
             inherit inputs;
           };
@@ -61,7 +57,6 @@
         # sudo nixos-rebuild switch --flake .#fran-laptop
         fran-laptop = nixpkgs.lib.nixosSystem {
           inherit system;
-          inherit pkgs;
           specialArgs = {
             inherit inputs;
           };
