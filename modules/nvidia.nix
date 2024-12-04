@@ -1,5 +1,6 @@
 {
   config,
+  pkgs,
   ...
 }:
 
@@ -23,5 +24,14 @@
         ./nvidia.patch
       ];
     };
+  };
+
+  environment.systemPackages = with pkgs; [
+    cudaPackages.cudatoolkit
+    cudaPackages.cudnn
+  ];
+
+  environment.variables = {
+    CUDA_PATH = pkgs.cudatoolkit;
   };
 }
