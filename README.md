@@ -1,3 +1,7 @@
 # My Nixos dotfiles
 
-TODO: migrate nvim config & some non-system packages to home-manager
+TODOS:
+
+- Organize home-manager
+- Fix Blender issue (no GPUs detected for CUDA)
+- Set power profiles for laptop (Tuned? PPD? TLP?)
