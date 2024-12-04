@@ -19,7 +19,7 @@
     just
     linux-wifi-hotspot
     orca-slicer
-    blender
+    (blender.override { cudaSupport = true; })
   ];
 
   home.file = {
@@ -27,11 +27,6 @@
   };
 
   programs.home-manager.enable = true;
-  nixpkgs.config.packageOverrides = self: rec {
-    blender = self.blender.override {
-      cudaSupport = true;
-    };
-  };
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
