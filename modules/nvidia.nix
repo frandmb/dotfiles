@@ -29,6 +29,7 @@
   environment.systemPackages = with pkgs; [
     cudaPackages.cudatoolkit
     cudaPackages.cudnn
+    cudaPackages.cutensor
   ];
 
   environment.variables = {
