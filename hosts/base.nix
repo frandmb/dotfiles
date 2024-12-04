@@ -55,17 +55,16 @@
   time.timeZone = "America/Argentina/Buenos_Aires";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  services.displayManager.sddm.wayland.enable = true;
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm = {
+    wayland.enable = true;
+    enable = true;
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
     variant = "altgr-intl";
   };
-
-  # Enable CUPS to print documents.
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;

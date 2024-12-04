@@ -38,6 +38,7 @@
         ./modules/key-remap.nix
         ./modules/software/default.nix
         ./modules/fhs-compat.nix
+        ./modules/fonts.nix
       ];
     in
     {
@@ -51,6 +52,8 @@
           modules = sysModules ++ [
             ./hosts/desktop/config.nix
             ./modules/nvidia.nix
+            ./modules/DEs/plasma.nix
+            ./modules/DEs/hyprland.nix
           ];
         };
 
@@ -70,7 +73,9 @@
       homeConfigurations = {
         fran = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ ./home/home.nix ];
+          modules = [
+            ./home/home.nix
+          ];
           extraSpecialArgs = {
             inherit inputs;
           };

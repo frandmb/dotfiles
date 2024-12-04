@@ -19,7 +19,7 @@
     just
     linux-wifi-hotspot
     orca-slicer
-    (blender.override { cudaSupport = true; })
+    blender
   ];
 
   home.file = {
