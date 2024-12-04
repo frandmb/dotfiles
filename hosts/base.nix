@@ -78,10 +78,9 @@
       "wheel"
     ];
   };
-  nixpkgs.config.allowUnfree = true;
 
-  hardware.graphics = {
-    enable = true;
+  hardware = {
+    graphics.enable = true;
   };
 
   virtualisation = {

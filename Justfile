@@ -1,6 +1,9 @@
 # sudo just deploy desktop
 build host:
-  nixos-rebuild switch --flake .#{{host}} --impure
+  nixos-rebuild switch --flake .#{{host}} --impure --accept-flake-config
+
+rebuild:
+  nixos-rebuild switch --flake .#$HOSTNAME --impure --accept-flake-config
 
 build-home:
   home-manager switch --flake .

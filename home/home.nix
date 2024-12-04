@@ -6,11 +6,6 @@
 }:
 
 {
-  nixpkgs.overlays = [
-    (final: prev: {
-      orca-slicer = inputs.nixos-unstable-small.legacyPackages.${prev.system}.orca-slicer;
-    })
-  ];
   home.username = "fran";
   home.homeDirectory = "/home/fran";
 
@@ -23,6 +18,7 @@
     just
     linux-wifi-hotspot
     orca-slicer
+    blender
   ];
 
   home.file = {

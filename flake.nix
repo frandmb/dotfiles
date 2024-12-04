@@ -1,5 +1,15 @@
 {
   description = "My Nix Flake";
+  nixConfig = {
+    extra-substituters = [
+      "https://cuda-maintainers.cachix.org"
+      "https://nix-community.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "cuda-maintainers.cachix.org-1:0dq3bujKpuEPMCX6U4WylrUDZ9JyUG0VpVZa7CNfq5E="
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
+  };
   inputs = {
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixos-unstable";
@@ -21,7 +31,10 @@
     }:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
       sysModules = [
         /etc/nixos/hardware-configuration.nix
         ./hosts/base.nix
@@ -32,25 +45,29 @@
     in
     {
       nixosConfigurations = {
-        # sudo nixos-rebuild switch --flake .#desktop
-        desktop = nixpkgs.lib.nixosSystem {
+        # sudo nixos-rebuild switch --flake .#fran-desktop
+        fran-desktop = nixpkgs.lib.nixosSystem {
           inherit system;
+          inherit pkgs;
           specialArgs = {
             inherit inputs;
           };
           modules = sysModules ++ [
             ./hosts/desktop/config.nix
+            ./modules/nvidia.nix
           ];
         };
 
-        # sudo nixos-rebuild switch --flake .#thinkpad
-        thinkpad = nixpkgs.lib.nixosSystem {
+        # sudo nixos-rebuild switch --flake .#fran-laptop
+        fran-laptop = nixpkgs.lib.nixosSystem {
           inherit system;
+          inherit pkgs;
           specialArgs = {
             inherit inputs;
           };
           modules = sysModules ++ [
-            ./hosts/thinkpad/config.nix
+            ./hosts/laptop/config.nix
+            ./modules/radeon.nix
           ];
         };
       };
