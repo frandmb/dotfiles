@@ -2,12 +2,14 @@
   config,
   pkgs,
   lib,
+  inputs,
   ...
 }:
 {
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
+    package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   };
 
   environment.sessionVariables = {
@@ -17,7 +19,7 @@
 
   environment.systemPackages = with pkgs; [
     mako # Notifications daemon
-    libnotify
+    dunst
     rofi-wayland
     swww
     (pkgs.waybar.overrideAttrs (oldAttrs: {
@@ -26,6 +28,7 @@
     networkmanagerapplet
     grim # Screenshot tool
     slurp # select tool
+    pavucontrol
   ];
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];

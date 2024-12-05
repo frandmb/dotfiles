@@ -21,6 +21,9 @@
     nixos-unstable-small = {
       url = "github:nixos/nixpkgs/nixos-unstable-small";
     };
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+    };
   };
   outputs =
     inputs@{
