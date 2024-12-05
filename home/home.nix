@@ -24,6 +24,7 @@
 
   home.file = {
     ".config/kitty".source = ./kitty;
+    ".config/hypr".source = ./hypr;
   };
 
   programs.home-manager.enable = true;

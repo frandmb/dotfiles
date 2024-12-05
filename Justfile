@@ -8,6 +8,9 @@ rebuild:
 build-home:
   home-manager switch --flake .
 
+build-home-force:
+  home-manager switch --flake . -b backup
+
 up:
   nix flake update
 
