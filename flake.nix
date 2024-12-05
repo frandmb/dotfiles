@@ -56,7 +56,7 @@
             ./hosts/desktop/config.nix
             ./modules/nvidia.nix
             ./modules/DEs/plasma.nix
-            ./modules/DEs/hyprland.nix
+            #         ./modules/DEs/hyprland.nix
           ];
         };
 
