@@ -39,7 +39,7 @@
         /etc/nixos/hardware-configuration.nix
         ./hosts/base.nix
         ./modules/key-remap.nix
-        ./modules/software/default.nix
+        ./modules/software/system.nix
         ./modules/fhs-compat.nix
         ./modules/fonts.nix
       ];

@@ -10,4 +10,7 @@
     rocmPackages.clr.icd
   ];
 
+  environment.systemPackages = with pkgs; [
+    blender-hip
+  ];
 }

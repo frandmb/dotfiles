@@ -19,12 +19,10 @@
     just
     linux-wifi-hotspot
     orca-slicer
-    blender
   ];
 
   home.file = {
     ".config/kitty".source = ./kitty;
-    ".config/hypr".source = ./hypr;
   };
 
   programs.home-manager.enable = true;
