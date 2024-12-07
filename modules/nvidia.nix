@@ -22,4 +22,7 @@
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
+  hardware.nvidia-container-toolkit = {
+    enable = true;
+  };
 }
