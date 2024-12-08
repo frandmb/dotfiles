@@ -22,7 +22,7 @@
   ];
 
   home.file = {
-    ".config/kitty".source = ./kitty;
+    ".config/kitty".source = ./config/kitty;
   };
 
   programs.home-manager.enable = true;
