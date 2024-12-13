@@ -10,7 +10,6 @@
 
   environment.systemPackages = with pkgs; [
     cudaPackages.cudatoolkit
-    (blender.override { cudaSupport = true; })
   ];
 
   hardware.nvidia = {
@@ -24,5 +23,9 @@
   };
   hardware.nvidia-container-toolkit = {
     enable = true;
+  };
+
+  environment.variables = {
+    GPU_ACCELERATION = "CUDA";
   };
 }

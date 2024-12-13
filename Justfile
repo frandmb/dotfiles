@@ -6,10 +6,10 @@ rebuild:
   nixos-rebuild switch --flake .#$HOSTNAME --impure --accept-flake-config
 
 build-home:
-  home-manager switch --flake .
+  home-manager switch --flake . --impure
 
 build-home-force:
-  home-manager switch --flake . -b backup
+  home-manager switch --flake . -b backup --impure
 
 up:
   nix flake update

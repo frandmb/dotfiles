@@ -10,7 +10,7 @@
     rocmPackages.clr.icd
   ];
 
-  environment.systemPackages = with pkgs; [
-    blender-hip
-  ];
+  environment.variables = {
+    GPU_ACCELERATION = "HIP";
+  };
 }

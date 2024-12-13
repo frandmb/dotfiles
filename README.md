@@ -2,5 +2,6 @@
 
 TODOS:
 
-- Organize home-manager
-- Fix Blender issue (no GPUs detected for CUDA)
+- Organize home-manager dev packages
+- Migrate nvim config to home-manager
+- Fix untrusted substituters (caches) for standalone home-manager

@@ -38,10 +38,10 @@
       sysModules = [
         /etc/nixos/hardware-configuration.nix
         ./hosts/base.nix
-        ./modules/key-remap.nix
-        ./modules/software/system.nix
+        ./modules/base/packages.nix
+        ./modules/base/fonts.nix
         ./modules/fhs-compat.nix
-        ./modules/fonts.nix
+        ./modules/key-remap.nix
       ];
     in
     {

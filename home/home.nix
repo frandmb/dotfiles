@@ -4,11 +4,22 @@
   inputs,
   ...
 }:
-
+let
+  gpuAcceleration = builtins.getEnv "GPU_ACCELERATION";
+in
 {
+  imports = [
+    ./hardware/nvidia.nix
+    ./hardware/radeon.nix
+    ./hardware/other.nix
+  ];
   nixpkgs.config.allowUnfree = true;
   home.username = "fran";
   home.homeDirectory = "/home/fran";
+
+  programs.nvidia-packages.enable = gpuAcceleration == "CUDA";
+  programs.radeon-packages.enable = gpuAcceleration == "HIP";
+  programs.otherGpu-packages.enable = gpuAcceleration == "";
 
   home.packages = with pkgs; [
     alacritty
