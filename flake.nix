@@ -69,6 +69,7 @@
           modules = sysModules ++ [
             ./hosts/laptop/config.nix
             ./modules/radeon.nix
+            ./modules/DEs/plasma.nix
           ];
         };
       };
