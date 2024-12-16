@@ -13,6 +13,7 @@ in
     ./hardware/radeon.nix
     ./hardware/other.nix
   ];
+
   nixpkgs.config.allowUnfree = true;
   home.username = "fran";
   home.homeDirectory = "/home/fran";
