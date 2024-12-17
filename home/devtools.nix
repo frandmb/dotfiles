@@ -3,7 +3,11 @@
   pkgs,
   ...
 }:
-{
+let
+  homedir = "${config.home.homeDirectory}";
+  dotfiles = "${homedir}/.dotfiles/home/config";
+  link = config.lib.file.mkOutOfStoreSymlink;
+in {
   home.packages = with pkgs; [
     alacritty
     kitty
@@ -26,6 +30,6 @@
   ];
 
   home.file = {
-    ".config/kitty".source = ./config/kitty;
+    ".config/kitty".source = link "${dotfiles}/kitty";
   };
 }
