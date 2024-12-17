@@ -1,0 +1,24 @@
+return {
+  -- Theme
+  {
+    "folke/tokyonight.nvim",
+    opts = {
+      transparent = true,
+      style = "night"
+    }
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "tokyonight",
+    },
+  },
+  {
+    "echasnovski/mini.indentscope",
+    opts = {
+      draw = {
+        animation = require('mini.indentscope').gen_animation.none()
+      }
+    }
+  },
+}

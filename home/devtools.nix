@@ -2,8 +2,7 @@
   config,
   pkgs,
   ...
-}:
-let
+}: let
   homedir = "${config.home.homeDirectory}";
   dotfiles = "${homedir}/.dotfiles/home/config";
   link = config.lib.file.mkOutOfStoreSymlink;
@@ -20,6 +19,7 @@ in {
     nodejs_22
     corepack_22
     python3
+    tree-sitter
 
     # Nix language tools
     alejandra
@@ -31,5 +31,6 @@ in {
 
   home.file = {
     ".config/kitty".source = link "${dotfiles}/kitty";
+    ".config/nvim".source = link "${dotfiles}/nvim";
   };
 }

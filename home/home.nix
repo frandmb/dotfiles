@@ -3,11 +3,9 @@
   pkgs,
   inputs,
   ...
-}:
-let
+}: let
   gpuAcceleration = builtins.getEnv "GPU_ACCELERATION";
-in
-{
+in {
   imports = [
     ./hardware/nvidia.nix
     ./hardware/radeon.nix
