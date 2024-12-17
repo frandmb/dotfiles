@@ -12,6 +12,7 @@ in
     ./hardware/nvidia.nix
     ./hardware/radeon.nix
     ./hardware/other.nix
+    ./devtools.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -23,19 +24,9 @@ in
   programs.otherGpu-packages.enable = gpuAcceleration == "";
 
   home.packages = with pkgs; [
-    alacritty
-    kitty
-    ripgrep
-    fd
-    lazygit
-    just
     linux-wifi-hotspot
     orca-slicer
   ];
-
-  home.file = {
-    ".config/kitty".source = ./config/kitty;
-  };
 
   programs.home-manager.enable = true;
 

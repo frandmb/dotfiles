@@ -8,14 +8,9 @@
     distrobox
     wget
     gcc
-    kdePackages.plasma-thunderbolt
-    nixfmt-rfc-style
     cargo
-    nodejs_22
-    corepack_22
     wl-clipboard
-    deno
-    python3
+    kdePackages.plasma-thunderbolt
     alsa-utils
   ];
 
