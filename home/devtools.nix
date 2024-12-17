@@ -4,7 +4,7 @@
   ...
 }: let
   homedir = "${config.home.homeDirectory}";
-  dotfiles = "${homedir}/.dotfiles/home/config";
+  dotfiles = "${homedir}/.nix-conf/home/config";
   link = config.lib.file.mkOutOfStoreSymlink;
 in {
   home.packages = with pkgs; [
