@@ -8,7 +8,6 @@
   link = config.lib.file.mkOutOfStoreSymlink;
 in {
   home.packages = with pkgs; [
-    alacritty
     kitty
     ripgrep
     fd
