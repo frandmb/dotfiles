@@ -12,8 +12,10 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        gdscript = {},
+        gdscript = { mason = false },
+        gopls = { mason = false },
         nixd = {
+          mason = false,
           nixpkgs = {
             expr = "import <nixpkgs> { }",
           },
