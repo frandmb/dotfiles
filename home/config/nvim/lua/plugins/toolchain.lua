@@ -4,6 +4,7 @@ return {
     opts = {
       formatters_by_ft = {
         nix = { "alejandra" },
+        gdscript = { "gdformat" },
       },
     },
   },
@@ -11,11 +12,20 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        gdscript = {},
         nixd = {
           nixpkgs = {
             expr = "import <nixpkgs> { }",
           },
         },
+      },
+    },
+  },
+  {
+    "neovim/nvim-lint",
+    opts = {
+      linters_by_ft = {
+        gdscript = { "gdlint" },
       },
     },
   },
