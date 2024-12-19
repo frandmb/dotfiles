@@ -1,4 +1,3 @@
-{ ... }:
-{
+{...}: {
   networking.hostName = "fran-desktop";
 }

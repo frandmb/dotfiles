@@ -4,13 +4,11 @@
   lib,
   config,
   ...
-}:
-{
+}: {
   services.envfs.enable = lib.mkDefault true;
 
   programs.nix-ld.enable = lib.mkDefault true;
-  programs.nix-ld.libraries =
-    with pkgs;
+  programs.nix-ld.libraries = with pkgs;
     [
       acl
       attr

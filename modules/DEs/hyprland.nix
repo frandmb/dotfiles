@@ -4,8 +4,7 @@
   lib,
   inputs,
   ...
-}:
-{
+}: {
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -23,7 +22,7 @@
     rofi-wayland
     swww
     (pkgs.waybar.overrideAttrs (oldAttrs: {
-      mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+      mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
     }))
     networkmanagerapplet
     grim # Screenshot tool
@@ -31,5 +30,5 @@
     pavucontrol
   ];
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 }

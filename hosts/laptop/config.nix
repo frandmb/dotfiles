@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   networking.hostName = "fran-laptop";
   environment.variables = {
     # Override for 780m iGpu

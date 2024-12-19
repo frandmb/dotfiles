@@ -4,11 +4,9 @@
   pkgs,
   ...
 }:
-with lib;
-let
+with lib; let
   cfg = config.programs.otherGpu-packages;
-in
-{
+in {
   options.programs.otherGpu-packages = {
     enable = mkEnableOption "Packages without specific GPU patches or versions";
   };

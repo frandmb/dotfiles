@@ -1,8 +1,7 @@
-{ pkgs, ... }:
-{
-  boot.initrd.kernelModules = [ "amdgpu" ];
+{pkgs, ...}: {
+  boot.initrd.kernelModules = ["amdgpu"];
   services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "amdgpu" ];
+  services.xserver.videoDrivers = ["amdgpu"];
   systemd.tmpfiles.rules = [
     "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
   ];

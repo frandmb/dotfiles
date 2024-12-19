@@ -4,12 +4,9 @@
   pkgs,
   ...
 }:
-with lib;
-
-let
+with lib; let
   cfg = config.programs.radeon-packages;
-in
-{
+in {
   options.programs.radeon-packages = {
     enable = mkEnableOption "HIP enabled packages and patches for AMD GPUs";
   };

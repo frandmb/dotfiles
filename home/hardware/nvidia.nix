@@ -4,19 +4,16 @@
   pkgs,
   ...
 }:
-with lib;
-
-let
+with lib; let
   cfg = config.programs.nvidia-packages;
-in
-{
+in {
   options.programs.nvidia-packages = {
     enable = mkEnableOption "Packages and patches for Nvidia";
   };
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
-      (blender.override { cudaSupport = true; })
+      (blender.override {cudaSupport = true;})
     ];
 
     xdg.desktopEntries = {

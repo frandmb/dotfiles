@@ -2,10 +2,8 @@
   config,
   pkgs,
   ...
-}:
-
-{
-  services.xserver.videoDrivers = [ "nvidia" ];
+}: {
+  services.xserver.videoDrivers = ["nvidia"];
   nixpkgs.config.cudaSupport = true;
 
   environment.systemPackages = with pkgs; [
