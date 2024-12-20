@@ -34,6 +34,7 @@
       ./modules/base/fonts.nix
       ./modules/fhs-compat.nix
       ./modules/key-remap.nix
+      ./modules/virt-manager.nix
     ];
   in {
     nixosConfigurations = {
