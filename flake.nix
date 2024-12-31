@@ -35,6 +35,7 @@
       ./modules/fhs-compat.nix
       ./modules/key-remap.nix
       ./modules/virt-manager.nix
+      ./modules/v4l2loopback.nix
     ];
   in {
     nixosConfigurations = {

@@ -4,7 +4,7 @@ return {
     opts = {
       formatters_by_ft = {
         nix = { "alejandra" },
-        gdscript = { "gdformat" },
+        gdscript = { "gdformat -s" },
       },
     },
   },

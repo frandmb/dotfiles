@@ -17,6 +17,7 @@ in {
   home.username = "fran";
   home.homeDirectory = "/home/fran";
 
+  programs.mangohud.enable = true;
   programs.nvidia-packages.enable = gpuAcceleration == "CUDA";
   programs.radeon-packages.enable = gpuAcceleration == "HIP";
   programs.otherGpu-packages.enable = gpuAcceleration == "";
