@@ -5,10 +5,11 @@ return {
     opts = {
       window = {
         mappings = {
-          ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } } },
+          ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },
+        },
         position = "float",
       },
-    }
+    },
   },
 
   -- support counts when navigating buffers
@@ -17,22 +18,30 @@ return {
     keys = {
       {
         "L",
-        function() vim.cmd("bnext " .. vim.v.count1) end,
+        function()
+          vim.cmd("bnext " .. vim.v.count1)
+        end,
         desc = "Next buffer",
       },
       {
         "H",
-        function() vim.cmd("bprev " .. vim.v.count1) end,
+        function()
+          vim.cmd("bprev " .. vim.v.count1)
+        end,
         desc = "Previous buffer",
       },
       {
         "]b",
-        function() vim.cmd("bnext " .. vim.v.count1) end,
+        function()
+          vim.cmd("bnext " .. vim.v.count1)
+        end,
         desc = "Next buffer",
       },
       {
         "[b",
-        function() vim.cmd("bprev " .. vim.v.count1) end,
+        function()
+          vim.cmd("bprev " .. vim.v.count1)
+        end,
         desc = "Previous buffer",
       },
     },

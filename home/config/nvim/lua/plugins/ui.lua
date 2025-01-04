@@ -4,8 +4,8 @@ return {
     "folke/tokyonight.nvim",
     opts = {
       transparent = true,
-      style = "night"
-    }
+      style = "night",
+    },
   },
   {
     "LazyVim/LazyVim",
@@ -17,8 +17,16 @@ return {
     "echasnovski/mini.indentscope",
     opts = {
       draw = {
-        animation = require('mini.indentscope').gen_animation.none()
-      }
-    }
+        animation = require("mini.indentscope").gen_animation.none(),
+      },
+    },
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = {
+      sections = {
+        lualine_z = {},
+      },
+    },
   },
 }
