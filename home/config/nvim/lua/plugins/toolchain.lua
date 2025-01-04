@@ -6,7 +6,6 @@ return {
         nix = { "alejandra" },
         gdscript = {
           "gdformat",
-          args = { "-s" },
         },
       },
     },
@@ -43,5 +42,10 @@ return {
         "godot_resource",
       },
     },
+  },
+  {
+    "echasnovski/mini.cursorword",
+    version = "*",
+    opts = {},
   },
 }
