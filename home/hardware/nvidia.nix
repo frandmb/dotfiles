@@ -15,6 +15,10 @@ in {
     home.packages = with pkgs; [
       (blender.override {cudaSupport = true;})
     ];
+    services.ollama = {
+      enable = true;
+      acceleration = "cuda";
+    };
 
     xdg.desktopEntries = {
       orca-nvidia = {

@@ -12,6 +12,10 @@ in {
   };
 
   config = mkIf cfg.enable {
+    services.ollama = {
+      enable = true;
+      acceleration = "rocm";
+    };
     home.packages = with pkgs; [
       blender-hip
     ];
