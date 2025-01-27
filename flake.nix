@@ -36,6 +36,7 @@
       ./modules/key-remap.nix
       ./modules/virt-manager.nix
       ./modules/v4l2loopback.nix
+      ./modules/waydroid.nix
     ];
   in {
     nixosConfigurations = {
