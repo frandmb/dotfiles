@@ -68,6 +68,7 @@
             ./hosts/laptop/config.nix
             ./modules/radeon.nix
             ./modules/DEs/plasma.nix
+            ./modules/fingerprint.nix
             nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen4
           ];
       };
