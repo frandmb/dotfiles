@@ -17,8 +17,8 @@ in {
     deno
     nodejs_22
     corepack_22
-    python3
     tree-sitter
+    jupyter
 
     # Nix language tools
     alejandra
