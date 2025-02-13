@@ -54,7 +54,6 @@
       "udev.log_priority=3"
     ];
   };
-  networking.networkmanager.enable = true;
 
   hardware.bluetooth = {
     enable = true;

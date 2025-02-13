@@ -1,13 +1,17 @@
 return {
   -- File explorer
   {
-    "nvim-neo-tree/neo-tree.nvim",
+    "folke/snacks.nvim",
     opts = {
-      window = {
-        mappings = {
-          ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },
+      picker = {
+        sources = {
+          explorer = {
+            layout = {
+              preset = "default",
+              preview = "preview",
+            },
+          },
         },
-        position = "float",
       },
     },
   },
