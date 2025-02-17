@@ -91,6 +91,8 @@
     graphics.enable = true;
   };
 
+  networking.networkmanager.enable = true;
+
   virtualisation = {
     podman = {
       enable = true;
