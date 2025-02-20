@@ -1,6 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
 {
   config,
   lib,
@@ -53,11 +50,6 @@
       "rd.udev.log_level=3"
       "udev.log_priority=3"
     ];
-  };
-
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
   };
 
   time.timeZone = "America/Argentina/Buenos_Aires";

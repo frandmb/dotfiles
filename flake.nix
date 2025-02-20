@@ -37,6 +37,7 @@
       ./modules/virt-manager.nix
       ./modules/v4l2loopback.nix
       ./modules/waydroid.nix
+      ./modules/bluetooth.nix
     ];
   in {
     nixosConfigurations = {
