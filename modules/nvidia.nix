@@ -17,7 +17,7 @@
 
     open = true;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    package = config.boot.kernelPackages.nvidiaPackages.production;
   };
   hardware.nvidia-container-toolkit = {
     enable = true;
