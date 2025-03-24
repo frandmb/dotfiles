@@ -24,7 +24,7 @@ in {
       orca-nvidia = {
         name = "OrcaSlicer Nvidia";
         genericName = "Slicer";
-        exec = "__EGL_VENDOR_LIBRARY_FILENAMES=${pkgs.mesa.drivers}/share/glvnd/egl_vendor.d/50_mesa.json ${pkgs.orca-slicer}/bin/orca-slicer";
+        exec = "__EGL_VENDOR_LIBRARY_FILENAMES=${pkgs.mesa}/share/glvnd/egl_vendor.d/50_mesa.json ${pkgs.orca-slicer}/bin/orca-slicer";
         terminal = false;
       };
     };
