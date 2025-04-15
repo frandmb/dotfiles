@@ -33,7 +33,6 @@
       ./modules/base/packages.nix
       ./modules/base/fonts.nix
       ./modules/fhs-compat.nix
-      ./modules/key-remap.nix
       ./modules/virt-manager.nix
       ./modules/v4l2loopback.nix
       ./modules/waydroid.nix
