@@ -1,4 +1,4 @@
-# sudo just deploy desktop
+# sudo just build desktop
 build host:
   nixos-rebuild switch --flake .#{{host}} --impure --accept-flake-config
 
