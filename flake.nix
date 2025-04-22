@@ -19,7 +19,6 @@
     # };
   };
   outputs = inputs @ {
-    self,
     nixpkgs,
     home-manager,
     nixos-hardware,
@@ -33,7 +32,7 @@
       ./modules/base/packages.nix
       ./modules/base/fonts.nix
       ./modules/fhs-compat.nix
-      ./modules/virt-manager.nix
+      ./modules/virtualization.nix
       ./modules/v4l2loopback.nix
       ./modules/waydroid.nix
       ./modules/bluetooth.nix
@@ -50,7 +49,7 @@
           sysModules
           ++ [
             ./hosts/desktop/config.nix
-            ./modules/nvidia.nix
+            ./modules/gpus/nvidia.nix
             ./modules/DEs/plasma.nix
             #./modules/DEs/hyprland.nix
           ];
@@ -66,7 +65,7 @@
           sysModules
           ++ [
             ./hosts/laptop/config.nix
-            ./modules/radeon.nix
+            ./modules/gpus/radeon.nix
             ./modules/DEs/plasma.nix
             ./modules/fingerprint.nix
             nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen4

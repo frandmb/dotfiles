@@ -85,15 +85,6 @@
 
   networking.networkmanager.enable = true;
 
-  virtualisation = {
-    podman = {
-      enable = true;
-      dockerCompat = true;
-    };
-    libvirtd.enable = true;
-  };
-  programs.virt-manager.enable = true;
-
   programs.appimage = {
     enable = true;
     binfmt = true;
