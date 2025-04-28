@@ -23,7 +23,24 @@
     enable = true;
   };
 
+  nixpkgs.config.allowUnfreePredicate = p:
+    builtins.all (
+      license:
+        license.free
+        || builtins.elem license.shortName [
+          "CUDA EULA"
+          "cuDNN EULA"
+          "cuTENSOR EULA"
+          "NVidia OptiX EULA"
+        ]
+    ) (
+      if builtins.isList p.meta.license
+      then p.meta.license
+      else [p.meta.license]
+    );
+
   environment.variables = {
     GPU_ACCELERATION = "CUDA";
+    CUDA_PATH = pkgs.cudatoolkit;
   };
 }
