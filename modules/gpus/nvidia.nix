@@ -8,7 +8,14 @@
 
   environment.systemPackages = with pkgs; [
     cudaPackages.cudatoolkit
+    nvidia-container-toolkit
+    nvidia-docker
   ];
+
+  boot = {
+    blacklistedKernelModules = ["nouveau"];
+    kernelModules = ["nvidia_uvm"]; # This shouldn't be needed once 25.05 is out
+  };
 
   hardware.nvidia = {
     modesetting.enable = true;
@@ -41,6 +48,7 @@
 
   environment.variables = {
     GPU_ACCELERATION = "CUDA";
-    CUDA_PATH = pkgs.cudatoolkit;
+    CUDA_HOME = pkgs.cudatoolkit;
+    LIBVA_DRIVER_NAME = "nvidia";
   };
 }
