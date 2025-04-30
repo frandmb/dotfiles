@@ -14,11 +14,13 @@ in {
     fzf
     lazygit
     just
+
+    tree-sitter
+    jupyter
+
     deno
     nodejs_22
     corepack_22
-    tree-sitter
-    jupyter
 
     # Nix language tools
     alejandra
