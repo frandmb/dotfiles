@@ -31,5 +31,6 @@ in {
   home.file = {
     ".config/kitty".source = link "${dotfiles}/kitty";
     ".config/nvim".source = link "${dotfiles}/nvim";
+    ".config/distrobox".source = link "${dotfiles}/distrobox";
   };
 }
