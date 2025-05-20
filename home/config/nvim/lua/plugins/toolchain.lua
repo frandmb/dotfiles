@@ -14,6 +14,15 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        eslint = {
+          experimental = {
+            useFlatConfig = true,
+          },
+          codeActionOnSave = {
+            enable = true,
+            mode = "all",
+          },
+        },
         gdscript = { mason = false },
         gopls = { mason = false },
         nixd = {
@@ -22,6 +31,17 @@ return {
             expr = "import <nixpkgs> { }",
           },
         },
+      },
+      setup = {
+        eslint = function()
+          require("lazyvim.util").lsp.on_attach(function(client)
+            if client.name == "eslint" then
+              client.server_capabilities.documentFormattingProvider = true
+            elseif client.name == "vtsls" or client.name == "volar" then
+              client.server_capabilities.documentFormattingProvider = false
+            end
+          end)
+        end,
       },
     },
   },
