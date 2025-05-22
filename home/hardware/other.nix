@@ -12,7 +12,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    services.ollama.enable = true;
     home.packages = with pkgs; [
       blender
     ];
