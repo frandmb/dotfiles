@@ -28,6 +28,11 @@ in {
     game-devices-udev-rules
   ];
 
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
+  };
+  programs.bash.enable = true;
   programs.home-manager.enable = true;
 
   # This value determines the Home Manager release that your configuration is
