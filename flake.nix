@@ -28,7 +28,7 @@
     pkgs = nixpkgs.legacyPackages.${system};
     sysModules = [
       /etc/nixos/hardware-configuration.nix
-      ./hosts/config.nix
+      ./hosts/base.nix
       ./modules/base/packages.nix
       ./modules/base/fonts.nix
       ./modules/fhs-compat.nix
