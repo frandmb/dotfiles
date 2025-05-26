@@ -12,6 +12,7 @@
     alsa-utils
     pciutils
     wirelesstools
+    busybox
   ];
 
   programs = {
