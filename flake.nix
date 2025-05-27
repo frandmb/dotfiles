@@ -28,14 +28,14 @@
     pkgs = nixpkgs.legacyPackages.${system};
     sysModules = [
       /etc/nixos/hardware-configuration.nix
-      ./hosts/base.nix
-      ./modules/base/packages.nix
-      ./modules/base/fonts.nix
-      ./modules/fhs-compat.nix
-      ./modules/virtualization.nix
-      ./modules/v4l2loopback.nix
-      ./modules/waydroid.nix
-      ./modules/bluetooth.nix
+      ./system/hosts/base.nix
+      ./system/modules/base/packages.nix
+      ./system/modules/base/fonts.nix
+      ./system/modules/fhs-compat.nix
+      ./system/modules/virtualization.nix
+      ./system/modules/v4l2loopback.nix
+      ./system/modules/waydroid.nix
+      ./system/modules/bluetooth.nix
     ];
   in {
     nixosConfigurations = {
