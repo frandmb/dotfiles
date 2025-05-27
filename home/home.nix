@@ -32,6 +32,21 @@ in {
     enable = true;
     enableBashIntegration = true;
   };
+  programs.starship = {
+    enable = true;
+    settings = {
+      add_newline = true;
+      username = {
+        show_always = true;
+        style_user = "bold green";
+        style_root = "bold red";
+      };
+      directory = {
+        truncate_to_repo = false;
+      };
+    };
+  };
+
   programs.bash.enable = true;
   programs.home-manager.enable = true;
 

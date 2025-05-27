@@ -48,10 +48,10 @@
         modules =
           sysModules
           ++ [
-            ./hosts/desktop/config.nix
-            ./modules/gpus/nvidia.nix
-            ./modules/DEs/plasma.nix
-            #./modules/DEs/hyprland.nix
+            ./system/hosts/desktop/config.nix
+            ./system/modules/gpus/nvidia.nix
+            ./system/modules/DEs/plasma.nix
+            #./system/modules/DEs/hyprland.nix
           ];
       };
 
@@ -64,10 +64,10 @@
         modules =
           sysModules
           ++ [
-            ./hosts/laptop/config.nix
-            ./modules/gpus/radeon.nix
-            ./modules/DEs/plasma.nix
-            ./modules/fingerprint.nix
+            ./system/hosts/laptop/config.nix
+            ./system/modules/gpus/radeon.nix
+            ./system/modules/DEs/plasma.nix
+            ./system/modules/fingerprint.nix
             nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen4
           ];
       };
