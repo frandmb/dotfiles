@@ -51,6 +51,7 @@
             ./system/hosts/desktop/config.nix
             ./system/modules/gpus/nvidia.nix
             ./system/modules/DEs/plasma.nix
+            ./system/modules/gpus/lact.nix
             #./system/modules/DEs/hyprland.nix
           ];
       };
@@ -68,6 +69,7 @@
             ./system/modules/gpus/radeon.nix
             ./system/modules/DEs/plasma.nix
             ./system/modules/fingerprint.nix
+            ./system/modules/gpus/lact.nix
             nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen4
           ];
       };
