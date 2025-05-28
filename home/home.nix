@@ -47,7 +47,14 @@ in {
     };
   };
 
-  programs.bash.enable = true;
+  programs.bash = {
+    enable = true;
+    bashrcExtra = ''
+      function set_win_title(){
+      	echo -ne "\033]0; $PWD \007"
+      }
+      starship_precmd_user_func="set_win_title"'';
+  };
   programs.home-manager.enable = true;
 
   # This value determines the Home Manager release that your configuration is
