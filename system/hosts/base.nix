@@ -23,7 +23,7 @@
   };
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_6_14;
+    kernelPackages = lib.mkDefault pkgs.linuxPackages_latest;
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
     initrd.systemd.enable = true;
