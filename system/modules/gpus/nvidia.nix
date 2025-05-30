@@ -14,9 +14,7 @@
   ];
 
   boot = {
-    blacklistedKernelModules = ["nouveau"];
-    kernelModules = ["nvidia_uvm"]; # This shouldn't be needed once 25.05 is out
-    kernelPackages = lib.mkForce pkgs.linuxPackages_6_14;
+    kernelPackages = lib.mkForce pkgs.linuxPackages_latest;
   };
 
   hardware.nvidia = {
