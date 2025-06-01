@@ -2,7 +2,6 @@
   environment.systemPackages = with pkgs; [
     ffmpeg-full
     tpm2-tss
-    git
     distrobox
     wget
     gcc
@@ -23,5 +22,9 @@
     firefox.enable = false;
     gnome-disks.enable = true;
     kdeconnect.enable = true;
+    git = {
+      enable = true;
+      lfs.enable = true;
+    };
   };
 }
