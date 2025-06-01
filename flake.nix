@@ -69,7 +69,6 @@
             ./system/modules/gpus/radeon.nix
             ./system/modules/DEs/plasma.nix
             ./system/modules/fingerprint.nix
-            ./system/modules/gpus/lact.nix
             nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen4
           ];
       };
