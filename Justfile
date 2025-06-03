@@ -21,3 +21,6 @@ upp flake-url:
 
 cleanup:
   nix-collect-garbage --delete-older-than 7d
+
+enroll-key:
+	systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0 /dev/nvme1n1p2
