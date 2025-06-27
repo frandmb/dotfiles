@@ -31,6 +31,14 @@ return {
             expr = "import <nixpkgs> { }",
           },
         },
+        volar = {
+          init_options = {
+            vue = {
+              hybridMode = false,
+            },
+          },
+          vtsls = {},
+        },
       },
       setup = {
         eslint = function()
