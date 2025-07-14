@@ -1,4 +1,6 @@
 {...}: {
   networking.hostName = "fran-desktop";
-  networking.networkmanager.wifi.powersave = false;
+  networking.networkmanager.wifi = {
+    powersave = false;
+  };
 }
