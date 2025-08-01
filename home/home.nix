@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  inputs,
-  ...
-}: let
+{pkgs, ...}: let
   gpuAcceleration = builtins.getEnv "GPU_ACCELERATION";
 in {
   imports = [
@@ -55,6 +50,7 @@ in {
       }
       starship_precmd_user_func="set_win_title"'';
   };
+  services.ssh-agent.enable = true;
   programs.home-manager.enable = true;
 
   # This value determines the Home Manager release that your configuration is

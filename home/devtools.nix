@@ -18,6 +18,8 @@ in {
     tree-sitter
     jupyter
 
+    rustup
+
     deno
     nodejs_22
     corepack_22
