@@ -4,9 +4,6 @@ return {
     opts = {
       formatters_by_ft = {
         nix = { "alejandra" },
-        gdscript = {
-          "gdformat",
-        },
       },
     },
   },
@@ -23,7 +20,6 @@ return {
             mode = "all",
           },
         },
-        gdscript = { mason = false },
         gopls = { mason = false },
         nixd = {
           mason = false,
@@ -54,20 +50,10 @@ return {
     },
   },
   {
-    "mfussenegger/nvim-lint",
-    opts = {
-      linters_by_ft = {
-        gdscript = { "gdlint" },
-      },
-    },
-  },
-  {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "gdscript",
         "gdshader",
-        "godot_resource",
       },
     },
   },
