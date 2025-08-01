@@ -39,6 +39,13 @@ in {
       directory = {
         truncate_to_repo = false;
       };
+      format = ''
+        $all$fill$time$line_break$jobs$battery$status$os$container$netns$shell$character'';
+      time = {
+        disabled = false;
+        format = "[$time]($style) ";
+        time_format = "%H:%M";
+      };
     };
   };
 
