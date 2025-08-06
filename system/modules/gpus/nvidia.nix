@@ -13,10 +13,12 @@
   environment.systemPackages = with pkgs; [
     cudaPackages.cudatoolkit
     nvidia-docker
+    egl-wayland
   ];
 
   boot = {
     kernelPackages = lib.mkForce pkgs.linuxPackages_latest;
+    kernelParams = ["nvidia_drm.fbdev=1"];
   };
 
   hardware.nvidia = {

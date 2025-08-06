@@ -12,6 +12,7 @@
     pciutils
     wirelesstools
     busybox
+    libGL
   ];
 
   programs = {

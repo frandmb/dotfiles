@@ -52,6 +52,7 @@
             ./system/modules/gpus/nvidia.nix
             ./system/modules/DEs/plasma.nix
             ./system/modules/gpus/lact.nix
+            ./system/modules/cpus/amd.nix
             #./system/modules/DEs/hyprland.nix
           ];
       };
