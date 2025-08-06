@@ -1,5 +1,12 @@
 {
   description = "My Nix Flake";
+  nixConfig = {
+    substituters = [
+      "https://nix-community.cachix.org"
+      "https://cache.nixos.org"
+      "https://cuda-maintainers.cachix.org"
+    ];
+  };
   inputs = {
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixos-unstable";
@@ -14,9 +21,6 @@
     nixos-unstable-small = {
       url = "github:nixos/nixpkgs/nixos-unstable-small";
     };
-    # hyprland = {
-    #  url = "github:hyprwm/Hyprland";
-    # };
   };
   outputs = inputs @ {
     nixpkgs,
@@ -53,7 +57,6 @@
             ./system/modules/DEs/plasma.nix
             ./system/modules/gpus/lact.nix
             ./system/modules/cpus/amd.nix
-            #./system/modules/DEs/hyprland.nix
           ];
       };
 

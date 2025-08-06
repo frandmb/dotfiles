@@ -3,7 +3,9 @@
   pkgs,
   lib,
   ...
-}: {
+}: let
+  nvidiaPackage = config.boot.kernelPackages.nvidiaPackages.latest;
+in {
   services.xserver.videoDrivers = ["nvidia"];
 
   nixpkgs.config = {
@@ -28,7 +30,7 @@
 
     open = true;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
+    package = nvidiaPackage;
   };
   hardware.nvidia-container-toolkit = {
     enable = true;
@@ -36,7 +38,10 @@
 
   environment.variables = {
     GPU_ACCELERATION = "CUDA";
-    CUDA_HOME = pkgs.cudatoolkit;
+    CUDA_PATH = pkgs.cudatoolkit;
+    LD_LIBRARY_PATH = "${nvidiaPackage}/lib";
+    EXTRA_LDFLAGS = "-L/lib -L${nvidiaPackage}/lib";
+    EXTRA_CCFLAGS = "-I/usr/include";
     LIBVA_DRIVER_NAME = "nvidia";
   };
 }
