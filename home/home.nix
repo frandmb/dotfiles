@@ -19,7 +19,6 @@ in {
 
   home.packages = with pkgs; [
     linux-wifi-hotspot
-    orca-slicer
     game-devices-udev-rules
   ];
 

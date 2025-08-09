@@ -15,14 +15,5 @@ in {
     home.packages = with pkgs; [
       (blender.override {cudaSupport = true;})
     ];
-
-    xdg.desktopEntries = {
-      orca-nvidia = {
-        name = "OrcaSlicer Nvidia";
-        genericName = "Slicer";
-        exec = "__EGL_VENDOR_LIBRARY_FILENAMES=/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json ${pkgs.orca-slicer}/bin/orca-slicer";
-        terminal = false;
-      };
-    };
   };
 }
