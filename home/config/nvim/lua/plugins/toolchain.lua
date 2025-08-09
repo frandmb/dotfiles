@@ -20,13 +20,6 @@ return {
             mode = "all",
           },
         },
-        gopls = { mason = false },
-        nixd = {
-          mason = false,
-          nixpkgs = {
-            expr = "import <nixpkgs> { }",
-          },
-        },
         volar = {
           init_options = {
             vue = {
@@ -34,6 +27,14 @@ return {
             },
           },
           vtsls = {},
+        },
+        denols = { mason = false },
+        gopls = { mason = false },
+        nixd = {
+          mason = false,
+          nixpkgs = {
+            expr = "import <nixpkgs> { }",
+          },
         },
       },
       setup = {
