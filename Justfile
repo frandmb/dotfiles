@@ -24,3 +24,7 @@ cleanup:
 
 enroll-key:
 	systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0 /dev/nvme1n1p2
+
+# Setup Nvidia CDI hook
+setup-cdi:
+	nvidia-ctk cdi generate --output=/tmp/cdi/nvidia.yaml --nvidia-cdi-hook-path=${NVIDIA_CDI_HOOK_PATH}
