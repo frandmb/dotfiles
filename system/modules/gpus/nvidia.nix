@@ -39,9 +39,10 @@ in {
   environment.variables = {
     GPU_ACCELERATION = "CUDA";
     CUDA_PATH = pkgs.cudatoolkit;
-    LD_LIBRARY_PATH = "${nvidiaPackage}/lib";
+    # LD_LIBRARY_PATH = "${nvidiaPackage}/lib";
     EXTRA_LDFLAGS = "-L/lib -L${nvidiaPackage}/lib";
     EXTRA_CCFLAGS = "-I/usr/include";
     LIBVA_DRIVER_NAME = "nvidia";
+    NVIDIA_CDI_HOOK_PATH = "${pkgs.nvidia-container-toolkit}/bin/nvidia-cdi-hook";
   };
 }
