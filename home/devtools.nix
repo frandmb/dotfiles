@@ -3,9 +3,13 @@
   pkgs,
   ...
 }: let
-  homedir = "${config.home.homeDirectory}";
-  dotfiles = "${homedir}/.nix-conf/home/config";
   link = config.lib.file.mkOutOfStoreSymlink;
+  dir = builtins.toString ./.;
+  dotfilesPath = "${dir}/config";
+  dotfilesConfig = builtins.listToAttrs (builtins.map (name: {
+    name = ".config/${name}";
+    value = {source = link "${dotfilesPath}/${name}";};
+  }) (builtins.attrNames (builtins.readDir dotfilesPath)));
 in {
   home.packages = with pkgs; [
     kitty
@@ -32,9 +36,5 @@ in {
     stylua
   ];
 
-  home.file = {
-    ".config/kitty".source = link "${dotfiles}/kitty";
-    ".config/nvim".source = link "${dotfiles}/nvim";
-    ".config/distrobox".source = link "${dotfiles}/distrobox";
-  };
+  home.file = dotfilesConfig;
 }
