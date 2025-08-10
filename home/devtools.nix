@@ -14,6 +14,7 @@ in {
   home.packages = with pkgs; [
     kitty
     rio
+
     ripgrep
     fd
     fzf
@@ -24,6 +25,8 @@ in {
     jupyter
 
     rustup
+
+    helix
 
     deno
     nodejs_22
@@ -36,6 +39,8 @@ in {
     # Lua language tools
     stylua
   ];
+
+  programs.nushell.enable = true;
 
   home.file = dotfilesConfig;
 }
