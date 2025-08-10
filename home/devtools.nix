@@ -4,15 +4,16 @@
   ...
 }: let
   link = config.lib.file.mkOutOfStoreSymlink;
-  dir = builtins.toString ./.;
-  dotfilesPath = "${dir}/config";
+  src = builtins.getEnv "PWD";
+  dotfilesPath = "${src}/home/config";
   dotfilesConfig = builtins.listToAttrs (builtins.map (name: {
     name = ".config/${name}";
-    value = {source = link "${dotfilesPath}/${name}";};
+    value.source = link "${dotfilesPath}/${name}";
   }) (builtins.attrNames (builtins.readDir dotfilesPath)));
 in {
   home.packages = with pkgs; [
     kitty
+    rio
     ripgrep
     fd
     fzf
