@@ -1,15 +1,10 @@
+theme = "Monalisa"
 padding-y = [15, 0]
 use-fork = false
 
 [fonts]
 family = "MesloLGS Nerd Font"
 size = 15
-
-[colors]
-background = '#000000'
-cursor = '#017522'
-tabs = '#443d40'
-tabs-active = '#017522'
 
 [navigation]
 use-current-path = true
