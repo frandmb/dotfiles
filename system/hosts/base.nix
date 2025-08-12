@@ -82,10 +82,14 @@
     graphics.enable = true;
   };
 
-  networking.networkmanager = {
-    enable = true;
-    wifi = {
-      backend = "iwd";
+  networking = {
+    firewall.enable = true;
+    nftables.enable = true;
+    networkmanager = {
+      enable = true;
+      wifi = {
+        backend = "iwd";
+      };
     };
   };
 
