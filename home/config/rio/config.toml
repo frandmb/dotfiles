@@ -17,6 +17,9 @@ use-kitty-keyboard-protocol = true
 [cursor]
 shape = 'block'
 
+[shell]
+program = "nu"
+
 
 # Hide the cursor while typing
 #
