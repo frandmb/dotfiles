@@ -5,6 +5,7 @@
   ...
 }: let
   nvidiaPackage = config.boot.kernelPackages.nvidiaPackages.latest;
+  cdiHookPath = "${pkgs.nvidia-container-toolkit}/bin/nvidia-cdi-hook";
 in {
   services.xserver.videoDrivers = ["nvidia"];
 
@@ -16,6 +17,9 @@ in {
     cudaPackages.cudatoolkit
     nvidia-docker
     egl-wayland
+    (pkgs.writeShellScriptBin "setup-nvidia-cdi" ''
+      exec nvidia-ctk cdi generate --nvidia-cdi-hook-path=${cdiHookPath} "$@"
+    '')
   ];
 
   boot = {
@@ -43,6 +47,6 @@ in {
     EXTRA_LDFLAGS = "-L/lib -L${nvidiaPackage}/lib";
     EXTRA_CCFLAGS = "-I/usr/include";
     LIBVA_DRIVER_NAME = "nvidia";
-    NVIDIA_CDI_HOOK_PATH = "${pkgs.nvidia-container-toolkit}/bin/nvidia-cdi-hook";
+    NVIDIA_CDI_HOOK_PATH = cdiHookPath;
   };
 }

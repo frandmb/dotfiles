@@ -80,10 +80,12 @@
 
   hardware = {
     graphics.enable = true;
+    steam-hardware.enable = true;
   };
 
   networking = {
     firewall.enable = true;
+    # firewall.allowedTCPPorts = [3000];
     nftables.enable = true;
     networkmanager = {
       enable = true;
