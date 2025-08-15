@@ -1,4 +1,4 @@
-theme = "Monalisa"
+theme = "MaterialDark"
 padding-y = [6, 0]
 use-fork = false
 
