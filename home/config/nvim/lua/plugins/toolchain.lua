@@ -20,15 +20,10 @@ return {
             mode = "all",
           },
         },
-        volar = {
-          init_options = {
-            vue = {
-              hybridMode = false,
-            },
-          },
-          vtsls = {},
+        denols = {
+          mason = false,
+          root_dir = require("lspconfig").util.root_pattern({ "deno.json", "deno.jsonc" }),
         },
-        denols = { mason = false },
         gopls = { mason = false },
         nixd = {
           mason = false,
