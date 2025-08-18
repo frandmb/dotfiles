@@ -6,9 +6,6 @@ return {
     })
   end,
 
-  -- depends on the typescript extra
-  { import = "lazyvim.plugins.extras.lang.typescript" },
-
   {
     "nvim-treesitter/nvim-treesitter",
     opts = { ensure_installed = { "vue", "css" } },
