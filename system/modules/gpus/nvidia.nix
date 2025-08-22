@@ -17,7 +17,7 @@ in {
     cudaPackages.cudatoolkit
     nvidia-docker
     egl-wayland
-    (pkgs.writeShellScriptBin "setup-nvidia-cdi" ''
+    (pkgs.writeShellScriptBin "nvidia-cdi-setup" ''
       exec nvidia-ctk cdi generate --nvidia-cdi-hook-path=${cdiHookPath} "$@"
     '')
   ];
@@ -43,6 +43,7 @@ in {
   environment.variables = {
     GPU_ACCELERATION = "CUDA";
     CUDA_PATH = pkgs.cudatoolkit;
+    CUDAToolkit_ROOT = pkgs.cudatoolkit;
     # LD_LIBRARY_PATH = "${nvidiaPackage}/lib";
     EXTRA_LDFLAGS = "-L/lib -L${nvidiaPackage}/lib";
     EXTRA_CCFLAGS = "-I/usr/include";
