@@ -5,7 +5,7 @@
   ...
 }: let
   nvidiaPackage = config.boot.kernelPackages.nvidiaPackages.latest;
-  cdiHookPath = "${pkgs.nvidia-container-toolkit}/bin/nvidia-cdi-hook";
+  cdiHookPath = "${pkgs.nvidia-container-toolkit.tools}/bin/nvidia-cdi-hook";
 in {
   services.xserver.videoDrivers = ["nvidia"];
 
