@@ -13,7 +13,7 @@ in {
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
-      (blender.override {cudaSupport = true;})
+      #(blender.override {cudaSupport = true;})
     ];
   };
 }
