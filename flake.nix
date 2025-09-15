@@ -38,7 +38,7 @@
       ./system/modules/fhs-compat.nix
       ./system/modules/virtualization.nix
       ./system/modules/v4l2loopback.nix
-      ./system/modules/waydroid.nix
+      # ./system/modules/waydroid.nix
       ./system/modules/bluetooth.nix
     ];
   in {
