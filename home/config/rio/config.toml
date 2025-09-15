@@ -16,6 +16,7 @@ use-kitty-keyboard-protocol = true
 
 [cursor]
 shape = 'block'
+blinking = true
 
 [shell]
 program = "nu"
