@@ -12,12 +12,14 @@ return {
     opts = {
       servers = {
         eslint = {
-          experimental = {
-            useFlatConfig = true,
-          },
-          codeActionOnSave = {
-            enable = true,
-            mode = "all",
+          settings = {
+            experimental = {
+              useFlatConfig = true,
+            },
+            codeActionOnSave = {
+              enable = true,
+              mode = "all",
+            },
           },
         },
         denols = {
@@ -66,7 +68,7 @@ return {
     },
   },
   {
-    "echasnovski/mini.cursorword",
+    "nvim-mini/mini.cursorword",
     version = "*",
     opts = {},
   },
