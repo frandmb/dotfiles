@@ -1,5 +1,5 @@
 theme = "MaterialDark"
-padding-y = [6, 0]
+#padding-y = [6, 0]
 use-fork = false
 
 [fonts]
@@ -19,7 +19,14 @@ shape = 'block'
 blinking = true
 
 [shell]
-program = "nu"
+program = "zellij"
+
+[bindings]
+keys = [
+	{ key = "t", with = "control | shift", action = "none" },
+	{ key = "tab", with = "control", action = "none" },
+	{ key = "tab", with = "control | shift", action = "none" },
+]
 
 
 # Hide the cursor while typing

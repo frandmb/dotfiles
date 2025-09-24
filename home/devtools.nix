@@ -47,5 +47,9 @@ in {
     '';
   };
 
+  programs.zellij = {
+    enable = true;
+  };
+
   home.file = dotfilesConfig;
 }
