@@ -38,6 +38,8 @@ in {
 
     # Lua language tools
     stylua
+
+    devpod
   ];
 
   programs.nushell = {
