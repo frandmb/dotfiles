@@ -138,8 +138,8 @@ keybinds clear-defaults=true {
         }
     }
     shared_except "locked" {
-				bind "Ctrl Tab" { MoveFocusOrTab "right"; }
-        bind "Ctrl Shift Tab" { MoveFocusOrTab "left"; }
+				bind "Ctrl `" { MoveFocusOrTab "right"; }
+        bind "Ctrl Shift `" { MoveFocusOrTab "left"; }
         bind "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt =" { Resize "Increase"; }
