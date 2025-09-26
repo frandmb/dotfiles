@@ -16,10 +16,6 @@ return {
             experimental = {
               useFlatConfig = true,
             },
-            codeActionOnSave = {
-              enable = true,
-              mode = "all",
-            },
           },
         },
         denols = {
