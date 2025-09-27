@@ -12,17 +12,15 @@ in {
   home.username = "fran";
   home.homeDirectory = "/home/fran";
 
-  programs.mangohud.enable = true;
-  programs.nvidia-packages.enable = gpuAcceleration == "CUDA";
-  programs.radeon-packages.enable = gpuAcceleration == "HIP";
-  programs.otherGpu-packages.enable = gpuAcceleration == "";
-
   home.packages = with pkgs; [
     linux-wifi-hotspot
     game-devices-udev-rules
   ];
 
   programs = {
+    nvidia-packages.enable = gpuAcceleration == "CUDA";
+    radeon-packages.enable = gpuAcceleration == "HIP";
+    otherGpu-packages.enable = gpuAcceleration == "";
     zoxide = {
       enable = true;
       enableBashIntegration = true;
