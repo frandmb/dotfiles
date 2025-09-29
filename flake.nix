@@ -40,6 +40,7 @@
       ./system/modules/v4l2loopback.nix
       # ./system/modules/waydroid.nix
       ./system/modules/bluetooth.nix
+      ./system/modules/wifi.nix
     ];
   in {
     nixosConfigurations = {
