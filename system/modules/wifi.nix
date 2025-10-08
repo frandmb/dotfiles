@@ -1,7 +1,10 @@
 {pkgs, ...}: {
-  networkmanager = {
-    wifi = {
-      backend = "iwd";
+  networking = {
+    wireless.enable = false;
+    networkmanager = {
+      wifi = {
+        backend = "iwd";
+      };
     };
   };
   hardware.wirelessRegulatoryDatabase = true;
