@@ -13,7 +13,7 @@
 in {
   home.packages = with pkgs; [
     kitty
-    rio
+    #  rio
 
     ripgrep
     fd
