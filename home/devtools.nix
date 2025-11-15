@@ -41,19 +41,21 @@ in {
     devpod
   ];
 
-  programs.nushell = {
-    enable = true;
-    extraConfig = ''
-      $env.config.show_banner = false
-    '';
-  };
+  programs = {
+    nushell = {
+      enable = true;
+      extraConfig = ''
+        $env.config.show_banner = false
+      '';
+    };
 
-  programs.zellij = {
-    enable = true;
-  };
+    zellij = {
+      enable = true;
+    };
 
-  programs.wezterm = {
-    enable = true;
+    wezterm = {
+      enable = true;
+    };
   };
 
   home.file = dotfilesConfig;
