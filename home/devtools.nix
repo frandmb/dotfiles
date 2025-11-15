@@ -13,7 +13,6 @@
 in {
   home.packages = with pkgs; [
     kitty
-    #  rio
 
     ripgrep
     fd
@@ -50,6 +49,10 @@ in {
   };
 
   programs.zellij = {
+    enable = true;
+  };
+
+  programs.wezterm = {
     enable = true;
   };
 
