@@ -29,7 +29,7 @@ in {
 
     deno
     nodejs_22
-    corepack_22
+    corepack_24
 
     # Nix language tools
     alejandra
@@ -39,6 +39,8 @@ in {
     stylua
 
     devpod
+
+    yazi
   ];
 
   programs = {
@@ -56,6 +58,10 @@ in {
     wezterm = {
       enable = true;
     };
+  };
+
+  home.sessionVariables = {
+    DEVPOD_HOME = "$HOME/.config/devpod";
   };
 
   home.file = dotfilesConfig;

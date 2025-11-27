@@ -7,7 +7,6 @@
     gcc
     cargo
     wl-clipboard
-    kdePackages.plasma-thunderbolt
     alsa-utils
     pciutils
     wirelesstools
