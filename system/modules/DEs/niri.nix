@@ -15,6 +15,7 @@
       kdePackages.polkit-qt-1
       kdePackages.qt6ct
       bibata-cursors
+      adw-gtk3
     ];
     programs.niri = {
       enable = true;
