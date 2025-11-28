@@ -38,7 +38,13 @@ in {
     };
     home-manager.enable = true;
   };
-  services.ssh-agent.enable = true;
+  services = {
+    kdeconnect = {
+      enable = true;
+      indicator = true;
+    };
+    ssh-agent.enable = true;
+  };
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release

@@ -1,5 +1,48 @@
 {
   "nodes": {
+    "dankMaterialShell": {
+      "inputs": {
+        "dgop": [
+          "dgop"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1764303153,
+        "narHash": "sha256-9zi/sP7Z2+Sd5ClNSkrigtImFd+ykOStu173jCHozDY=",
+        "owner": "AvengeMedia",
+        "repo": "DankMaterialShell",
+        "rev": "022102107866ad658e88c3ce21491991c9dcd14d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AvengeMedia",
+        "repo": "DankMaterialShell",
+        "type": "github"
+      }
+    },
+    "dgop": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1762835999,
+        "narHash": "sha256-UykYGrGFOFTmDpKTLNxj1wvd1gbDG4TkqLNSbV0TYwk=",
+        "owner": "AvengeMedia",
+        "repo": "dgop",
+        "rev": "799301991cd5dcea9b64245f9d500dcc76615653",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AvengeMedia",
+        "repo": "dgop",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -37,22 +80,6 @@
         "type": "github"
       }
     },
-    "nixos-unstable-small": {
-      "locked": {
-        "lastModified": 1764245472,
-        "narHash": "sha256-udCSZoKawLiNJKFQgikkN96tvVJggs61ihRq8sRt8tM=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "6c16b7ce10e5ef1fee3aecfb327be61888818a7a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable-small",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1763966396,
@@ -71,9 +98,10 @@
     },
     "root": {
       "inputs": {
+        "dankMaterialShell": "dankMaterialShell",
+        "dgop": "dgop",
         "home-manager": "home-manager",
         "nixos-hardware": "nixos-hardware",
-        "nixos-unstable-small": "nixos-unstable-small",
         "nixpkgs": "nixpkgs"
       }
     }

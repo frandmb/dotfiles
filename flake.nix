@@ -18,8 +18,17 @@
     nixos-hardware = {
       url = "github:nixos/nixos-hardware/master";
     };
-    nixos-unstable-small = {
-      url = "github:nixos/nixpkgs/nixos-unstable-small";
+    # nixos-unstable-small = {
+    #   url = "github:nixos/nixpkgs/nixos-unstable-small";
+    # };
+    dgop = {
+      url = "github:AvengeMedia/dgop";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    dankMaterialShell = {
+      url = "github:AvengeMedia/DankMaterialShell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.dgop.follows = "dgop";
     };
   };
   outputs = inputs @ {
@@ -55,7 +64,8 @@
           ++ [
             ./system/hosts/desktop/config.nix
             ./system/modules/gpus/nvidia.nix
-            ./system/modules/DEs/plasma.nix
+            #./system/modules/DEs/plasma.nix
+            ./system/modules/DEs/niri.nix
             ./system/modules/gpus/lact.nix
             ./system/modules/cpus/amd.nix
           ];
