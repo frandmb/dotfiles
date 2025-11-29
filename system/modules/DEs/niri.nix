@@ -42,8 +42,6 @@
 
     environment.variables = {
       TZ = "America/Buenos_Aires";
-      QT_QPA_PLATFORMTHEME = "qt6ct";
-      QT_QPA_PLATFORMTHEME_QT6 = "qt6ct";
     };
 
     hardware.i2c.enable = true;
