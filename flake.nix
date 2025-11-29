@@ -64,7 +64,6 @@
           ++ [
             ./system/hosts/desktop/config.nix
             ./system/modules/gpus/nvidia.nix
-            #./system/modules/DEs/plasma.nix
             ./system/modules/DEs/niri.nix
             ./system/modules/gpus/lact.nix
             ./system/modules/cpus/amd.nix
