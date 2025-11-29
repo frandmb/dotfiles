@@ -261,25 +261,29 @@
         }
       ],
       "rightWidgets": [
-        "systemTray",
+        {
+          "id": "clipboard",
+          "enabled": false
+        },
+        {
+          "id": "systemTray",
+          "enabled": true
+        },
         {
           "id": "cpuUsage",
-          "enabled": true,
-          "minimumWidth": false
+          "enabled": true
         },
         {
           "id": "memUsage",
-          "enabled": true,
-          "minimumWidth": false,
-          "showSwap": false
+          "enabled": true
         },
-        "notificationButton",
+        {
+          "id": "notificationButton",
+          "enabled": true
+        },
         {
           "id": "controlCenterButton",
-          "enabled": true,
-          "showNetworkIcon": true,
-          "showBluetoothIcon": true,
-          "showAudioIcon": true
+          "enabled": true
         }
       ],
       "spacing": 0,

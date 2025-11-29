@@ -502,10 +502,13 @@ binds {
 
     Mod+W { toggle-column-tabbed-display; }
 
+    Mod+Shift+S { screenshot; }
+    Ctrl+Mod+Shift+S { screenshot-screen; }
+    Alt+Mod+Shift+S { screenshot-window; }
+
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
-
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
     // so they may, for example, forward the key presses as-is to a remote machine.

@@ -37,7 +37,7 @@
     xdg.portal.extraPortals = [
       pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal-gnome
-      pkgs.kdePackages.xdg-desktop-portal-kde
+      pkgs.xdg-desktop-portal-wlr
     ];
 
     environment.variables = {
