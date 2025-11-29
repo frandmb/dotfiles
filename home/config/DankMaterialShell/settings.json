@@ -13,8 +13,8 @@
   "showSeconds": false,
   "useFahrenheit": false,
   "nightModeEnabled": false,
-  "animationSpeed": 1,
-  "customAnimationDuration": 97,
+  "animationSpeed": 4,
+  "customAnimationDuration": 125,
   "wallpaperFillMode": "Fit",
   "blurredWallpaperLayer": false,
   "blurWallpaperOnOverview": false,
@@ -236,10 +236,6 @@
           "enabled": true
         },
         {
-          "id": "workspaceSwitcher",
-          "enabled": true
-        },
-        {
           "id": "runningApps",
           "enabled": true,
           "runningAppsCompactMode": true
@@ -247,23 +243,18 @@
       ],
       "centerWidgets": [
         {
-          "id": "music",
-          "enabled": true,
-          "mediaSize": 1
-        },
-        {
-          "id": "clock",
-          "enabled": true
-        },
-        {
-          "id": "weather",
+          "id": "workspaceSwitcher",
           "enabled": true
         }
       ],
       "rightWidgets": [
         {
-          "id": "clipboard",
-          "enabled": false
+          "id": "music",
+          "enabled": true
+        },
+        {
+          "id": "weather",
+          "enabled": true
         },
         {
           "id": "systemTray",
@@ -275,6 +266,10 @@
         },
         {
           "id": "memUsage",
+          "enabled": true
+        },
+        {
+          "id": "clock",
           "enabled": true
         },
         {
