@@ -349,7 +349,6 @@ binds {
         spawn "dms" "ipc" "call" "audio" "micmute";
     }
     
-    // BL
     XF86MonBrightnessUp allow-when-locked=true {
        spawn "dms" "ipc" "call" "brightness" "increment" "5" "";
     }
@@ -360,8 +359,6 @@ binds {
 
     Mod+T hotkey-overlay-title="Open a Terminal: wezterm" { spawn "wezterm"; }
 
-    // Example media keys mapping using playerctl.
-    // This will work with any MPRIS-enabled media player.
     XF86AudioPlay        allow-when-locked=true { 
 			spawn "dms" "ipc" "call" "mpris" "playPause";
 		}
