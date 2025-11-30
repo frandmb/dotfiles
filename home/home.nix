@@ -38,12 +38,14 @@ in {
     };
     home-manager.enable = true;
   };
+
   services = {
     kdeconnect = {
       enable = true;
       indicator = true;
     };
     ssh-agent.enable = true;
+    playerctld.enable = true;
   };
 
   # This value determines the Home Manager release that your configuration is
