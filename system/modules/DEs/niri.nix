@@ -42,6 +42,11 @@
 
     environment.variables = {
       TZ = "America/Buenos_Aires";
+
+      ELECTRON_OZONE_PLATFORM_HINT = "auto";
+      QT_QPA_PLATFORM = "wayland";
+      QT_QPA_PLATFORMTHEME = "qt6ct";
+      QT_QPA_PLATFORMTHEME_QT6 = "qt6ct";
     };
 
     hardware.i2c.enable = true;
