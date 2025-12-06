@@ -94,8 +94,8 @@ output "DP-4" {
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
     transform "normal"
 
-    // Position of the output in the global coordinate space.
     // This affects directional monitor actions like "focus-monitor-left", and cursor movement.
+		// Position of the output in the global coordinate space.
     // The cursor can only move between directly adjacent outputs.
     // Output scale and rotation has to be taken into account for positioning:
     // outputs are sized in logical, or scaled, pixels.
@@ -108,6 +108,10 @@ output "DP-4" {
 }
 clipboard {
     disable-primary
+}
+
+overview { 
+	backdrop-color "#000000"
 }
 
 layout {
@@ -159,6 +163,8 @@ layout {
     // `draw-border-with-background`.
 
     // You can change how the focus ring looks.
+
+    background-color "#000000"
     focus-ring {
         width 0.5
 
@@ -498,7 +504,6 @@ binds {
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
-    Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
 
     Mod+Ctrl+F { expand-column-to-available-width; }
@@ -510,8 +515,8 @@ binds {
     Mod+Minus { set-column-width "-5%"; }
     Mod+Equal { set-column-width "+5%"; }
 
-		Mod+0 {
-        spawn-sh "niri msg action maximize-column && niri msg action set-window-height 100%"
+		Mod+F {
+        maximize-window-to-edges;
 		}
 
     Mod+Shift+Minus { set-window-height "-10%"; }
