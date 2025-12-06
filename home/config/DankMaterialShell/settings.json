@@ -1,6 +1,6 @@
 {
   "currentThemeName": "custom",
-  "customThemeFile": "",
+  "customThemeFile": "/home/fran/.config/DankMaterialShell/themes/theme_synthwave_electric.json",
   "matugenScheme": "scheme-dynamic-contrast",
   "runUserMatugenTemplates": true,
   "matugenTargetMonitor": "",
@@ -177,6 +177,10 @@
   "dockMargin": 0,
   "dockIconSize": 40,
   "dockIndicatorStyle": "circle",
+  "dockBorderEnabled": false,
+  "dockBorderColor": "surfaceText",
+  "dockBorderOpacity": 1,
+  "dockBorderThickness": 1,
   "notificationOverlayEnabled": false,
   "modalDarkenBackground": true,
   "lockScreenShowPowerActions": true,
@@ -249,6 +253,10 @@
       ],
       "rightWidgets": [
         {
+          "id": "colorPicker",
+          "enabled": true
+        },
+        {
           "id": "music",
           "enabled": true
         },
@@ -284,7 +292,7 @@
       "spacing": 0,
       "innerPadding": 0,
       "bottomGap": 0,
-      "transparency": 0,
+      "transparency": 1,
       "widgetTransparency": 1,
       "squareCorners": true,
       "noBackground": true,
