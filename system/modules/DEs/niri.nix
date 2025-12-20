@@ -47,6 +47,7 @@
       QT_QPA_PLATFORM = "wayland";
       QT_QPA_PLATFORMTHEME = "qt6ct";
       QT_QPA_PLATFORMTHEME_QT6 = "qt6ct";
+      NIXOS_OZONE_WL = "1";
     };
 
     hardware.i2c.enable = true;

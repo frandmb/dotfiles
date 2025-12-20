@@ -7,13 +7,14 @@ config.leader = { key = "a", mods = "CTRL" }
 
 -- #region font config
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
-config.font_size = 11.5
+config.font_size = 9
 -- #endregion
 
 config.default_prog = { "nu" }
+config.max_fps = 120
+config.enable_wayland = false
 
 -- #region theme
-
 -- tabs config
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = true
@@ -50,21 +51,22 @@ config.colors = {
 config.window_frame = {
 	active_titlebar_bg = "none",
 	inactive_titlebar_bg = "none",
+	font_size = 8,
 }
 -- #endregion
 
-resurrect.state_manager.periodic_save({
-	interval_seconds = 300,
-	save_workspaces = true,
-	save_windows = true,
-	save_tabs = true,
-})
-
-wezterm.on("gui-startup", function()
-	resurrect.state_manager.resurrect_on_gui_startup()
-end)
-resurrect.state_manager.set_max_nlines(10)
-
+-- resurrect.state_manager.periodic_save({
+-- 	interval_seconds = 300,
+-- 	save_workspaces = true,
+-- 	save_windows = true,
+-- 	save_tabs = true,
+-- })
+--
+-- wezterm.on("gui-startup", function()
+-- 	resurrect.state_manager.resurrect_on_gui_startup()
+-- end)
+-- resurrect.state_manager.set_max_nlines(10)
+--
 config.keys = {
 	{
 		mods = "CTRL",
@@ -72,7 +74,7 @@ config.keys = {
 		action = wezterm.action.QuitApplication,
 	},
 
-	--resurrect
+	--#region resurrect
 	{
 		key = "s",
 		mods = "ALT",
@@ -109,6 +111,7 @@ config.keys = {
 			end)
 		end),
 	},
+	--#endregion
 }
 
 return config

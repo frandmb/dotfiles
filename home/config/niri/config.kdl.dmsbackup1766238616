@@ -545,6 +545,6 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     Mod+Shift+E { quit; }
+
+    // Mod+Shift+P { power-off-monitors; }
 }
-// include "dms/binds.kdl"
-include "dms/colors.kdl"
