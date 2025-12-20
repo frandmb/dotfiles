@@ -55,15 +55,15 @@
       "width": 50
     },
     {
+      "id": "inputVolumeSlider",
+      "enabled": true,
+      "width": 50
+    },
+    {
       "id": "brightnessSlider",
       "enabled": true,
       "width": 50,
       "deviceName": "ddc:i2c-14"
-    },
-    {
-      "id": "wifi",
-      "enabled": true,
-      "width": 50
     },
     {
       "id": "bluetooth",
@@ -71,12 +71,12 @@
       "width": 50
     },
     {
-      "id": "audioOutput",
+      "id": "audioInput",
       "enabled": true,
       "width": 50
     },
     {
-      "id": "audioInput",
+      "id": "audioOutput",
       "enabled": true,
       "width": 50
     },
@@ -87,6 +87,16 @@
     },
     {
       "id": "darkMode",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "wifi",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "idleInhibitor",
       "enabled": true,
       "width": 50
     }
@@ -264,10 +274,6 @@
           "enabled": true
         },
         {
-          "id": "dankPomodoroTimer",
-          "enabled": true
-        },
-        {
           "id": "music",
           "enabled": true
         },
@@ -293,6 +299,10 @@
         },
         {
           "id": "notificationButton",
+          "enabled": true
+        },
+        {
+          "id": "battery",
           "enabled": true
         },
         {

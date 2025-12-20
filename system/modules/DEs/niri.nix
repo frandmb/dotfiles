@@ -17,6 +17,11 @@
       bibata-cursors
       adw-gtk3
     ];
+
+    services = {
+      power-profiles-daemon.enable = true;
+      upower.enable = true;
+    };
     programs.niri = {
       enable = true;
     };
