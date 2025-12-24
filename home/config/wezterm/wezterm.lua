@@ -7,13 +7,13 @@ config.leader = { key = "a", mods = "CTRL" }
 
 -- #region font config
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
-config.font_size = 9
+config.font_size = 11
 -- #endregion
 
 config.default_prog = { "nu" }
 config.max_fps = 120
-config.enable_wayland = false
-
+-- config.enable_wayland = false
+config.front_end = "WebGpu"
 -- #region theme
 -- tabs config
 config.tab_bar_at_bottom = true
@@ -51,7 +51,7 @@ config.colors = {
 config.window_frame = {
 	active_titlebar_bg = "none",
 	inactive_titlebar_bg = "none",
-	font_size = 8,
+	font_size = 10,
 }
 -- #endregion
 

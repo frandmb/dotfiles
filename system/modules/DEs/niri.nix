@@ -16,6 +16,7 @@
       kdePackages.qt6ct
       bibata-cursors
       adw-gtk3
+      nemo
     ];
 
     services = {
