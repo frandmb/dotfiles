@@ -519,6 +519,8 @@ binds {
         maximize-window-to-edges;
 		}
 
+    Mod+Ctrl+Shift+F { toggle-windowed-fullscreen; }
+
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
 

@@ -25,6 +25,7 @@
       enable = true;
       lfs.enable = true;
     };
+    firejail.enable = true;
   };
   # required for kde-connect
   networking.firewall = rec {

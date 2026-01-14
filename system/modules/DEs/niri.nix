@@ -1,13 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
-  imports = [
-    inputs.dankMaterialShell.nixosModules.dankMaterialShell
-    inputs.dankMaterialShell.nixosModules.greeter
-  ];
-
+{pkgs, ...}: {
   config = {
     environment.systemPackages = with pkgs; [
       gnome-keyring
@@ -16,27 +7,32 @@
       kdePackages.qt6ct
       bibata-cursors
       adw-gtk3
-      nemo
+      kdePackages.dolphin
+      kdePackages.ark
+      swayimg
     ];
 
     services = {
-      power-profiles-daemon.enable = true;
       upower.enable = true;
+      tuned = {
+        enable = true;
+        ppdSupport = true;
+      };
     };
     programs.niri = {
       enable = true;
     };
 
-    programs.dankMaterialShell = {
+    programs.dms-shell = {
       enable = true;
       systemd = {
         enable = true;
         restartIfChanged = true;
       };
-      greeter = {
-        enable = true;
-        compositor.name = "niri";
-      };
+    };
+    services.displayManager.dms-greeter = {
+      enable = true;
+      compositor.name = "niri";
     };
 
     xdg.portal.enable = true;

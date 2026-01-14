@@ -196,7 +196,7 @@
   "dockBorderOpacity": 1,
   "dockBorderThickness": 1,
   "notificationOverlayEnabled": false,
-  "modalDarkenBackground": false,
+  "modalDarkenBackground": true,
   "lockScreenShowPowerActions": true,
   "enableFprint": false,
   "maxFprintTries": 3,
