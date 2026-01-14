@@ -75,7 +75,7 @@
             ./system/modules/DEs/niri.nix
             # ./system/modules/DEs/plasma.nix
             ./system/modules/fingerprint.nix
-            nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen4
+            # nixos-hardware.nixosModules.lenovo-thinkpad-p14s-amd-gen4
           ];
       };
     };

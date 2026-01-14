@@ -12,8 +12,8 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs; [
-      blender-hip
-    ];
+    # home.packages = with pkgs; [
+    #   blender-hip
+    # ];
   };
 }
