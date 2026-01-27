@@ -5,12 +5,15 @@
       xwayland-satellite
       kdePackages.polkit-qt-1
       kdePackages.qt6ct
-      bibata-cursors
       adw-gtk3
-      kdePackages.dolphin
+      nemo
       kdePackages.ark
       swayimg
     ];
+    qt = {
+      enable = true;
+      platformTheme = "qt5ct";
+    };
 
     services = {
       upower.enable = true;
@@ -30,6 +33,7 @@
         restartIfChanged = true;
       };
     };
+    programs.dsearch.enable = true;
     services.displayManager.dms-greeter = {
       enable = true;
       compositor.name = "niri";
@@ -47,8 +51,6 @@
 
       ELECTRON_OZONE_PLATFORM_HINT = "auto";
       QT_QPA_PLATFORM = "wayland";
-      QT_QPA_PLATFORMTHEME = "qt6ct";
-      QT_QPA_PLATFORMTHEME_QT6 = "qt6ct";
       NIXOS_OZONE_WL = "1";
     };
 

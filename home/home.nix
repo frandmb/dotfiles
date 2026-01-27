@@ -12,6 +12,15 @@ in {
   home.username = "fran";
   home.homeDirectory = "/home/fran";
 
+  home.pointerCursor = {
+    enable = true;
+    gtk.enable = true;
+    x11.enable = true;
+    size = 24;
+    name = "Bibata-Modern-Classic";
+    package = pkgs.bibata-cursors;
+  };
+
   home.packages = with pkgs; [
     linux-wifi-hotspot
     game-devices-udev-rules

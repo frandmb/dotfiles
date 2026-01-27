@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs; [
     podman-compose
     dnsmasq
+    docker-compose
   ];
 
   programs.virt-manager.enable = true;
