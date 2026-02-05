@@ -53,6 +53,14 @@ config.window_frame = {
 	inactive_titlebar_bg = "none",
 	font_size = 10,
 }
+wezterm.on("window-focus-changed", function(window, pane)
+	local overrides = window:get_config_overrides() or {}
+	if not overrides.allow_win32_input_mode then
+		window:maximize()
+		overrides.allow_win32_input_mode = true
+		window:set_config_overrides(overrides)
+	end
+end)
 -- #endregion
 
 -- resurrect.state_manager.periodic_save({

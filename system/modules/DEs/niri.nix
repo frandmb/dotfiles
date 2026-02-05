@@ -45,10 +45,18 @@
       pkgs.xdg-desktop-portal-gnome
       pkgs.xdg-desktop-portal-wlr
     ];
+    xdg.terminal-exec = {
+      enable = true;
+      settings = {
+        default = [
+          "wezterm.desktop"
+        ];
+      };
+    };
 
     environment.variables = {
       TZ = "America/Buenos_Aires";
-
+      TERMINAL = "wezterm";
       ELECTRON_OZONE_PLATFORM_HINT = "auto";
       QT_QPA_PLATFORM = "wayland";
       NIXOS_OZONE_WL = "1";
