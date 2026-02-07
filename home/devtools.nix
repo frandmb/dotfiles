@@ -41,6 +41,8 @@ in {
     devpod
 
     yazi
+
+    delta
   ];
 
   programs = {
