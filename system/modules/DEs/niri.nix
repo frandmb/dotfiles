@@ -9,6 +9,7 @@
       nemo
       kdePackages.ark
       swayimg
+      xdg-desktop-portal-termfilechooser
     ];
     qt = {
       enable = true;
