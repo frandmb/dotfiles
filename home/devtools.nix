@@ -40,8 +40,6 @@ in {
 
     devpod
 
-    yazi
-
     delta
   ];
 
@@ -59,6 +57,12 @@ in {
 
     wezterm = {
       enable = true;
+    };
+
+    yazi = {
+      enable = true;
+      enableNushellIntegration = true;
+      shellWrapperName = "y";
     };
   };
 
