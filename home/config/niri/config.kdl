@@ -537,7 +537,9 @@ binds {
 
     Mod+W { toggle-column-tabbed-display; }
 
-    Mod+Shift+S { screenshot; }
+    Mod+Shift+S { 
+		  spawn "dms" "screenshot";
+	  }
     Ctrl+Mod+Shift+S { screenshot-screen; }
     Alt+Mod+Shift+S { screenshot-window; }
 

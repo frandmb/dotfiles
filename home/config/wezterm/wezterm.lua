@@ -82,6 +82,9 @@ config.keys = {
 		action = wezterm.action.QuitApplication,
 	},
 
+	{ key = "{", mods = "SHIFT|ALT", action = wezterm.action.MoveTabRelative(-1) },
+	{ key = "}", mods = "SHIFT|ALT", action = wezterm.action.MoveTabRelative(1) },
+
 	--#region resurrect
 	{
 		key = "s",
