@@ -33,6 +33,7 @@
         enable = true;
         restartIfChanged = true;
       };
+      enableCalendarEvents = false;
     };
     programs.dsearch.enable = true;
     services.displayManager.dms-greeter = {

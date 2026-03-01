@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  inputs,
   ...
 }: let
   nvidiaPackage = config.boot.kernelPackages.nvidiaPackages.latest;
@@ -34,7 +35,14 @@ in {
 
     open = true;
     nvidiaSettings = true;
-    package = nvidiaPackage;
+    package = let
+      nvidia-fixed-pkgs = import inputs.nixpkgs-nvidia {
+        system = "x86_64-linux";
+        config.allowUnfree = true;
+      };
+      fixedKernelPackages = nvidia-fixed-pkgs.linuxKernel.packagesFor config.boot.kernelPackages.kernel;
+    in
+      fixedKernelPackages.nvidiaPackages.beta;
   };
   hardware.nvidia-container-toolkit = {
     enable = true;

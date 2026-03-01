@@ -51,7 +51,6 @@ in {
   services = {
     kdeconnect = {
       enable = true;
-      indicator = true;
     };
     ssh-agent.enable = true;
   };

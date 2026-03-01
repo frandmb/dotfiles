@@ -558,5 +558,3 @@ binds {
 
     Mod+Shift+E { quit; }
 }
-
-include "dms/windowrules.kdl"
