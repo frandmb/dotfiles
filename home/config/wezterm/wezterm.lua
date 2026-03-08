@@ -11,6 +11,9 @@ config.font_size = 11
 -- #endregion
 
 config.default_prog = { "nu" }
+config.set_environment_variables = {
+	SHELL = "nu",
+}
 config.max_fps = 120
 -- config.enable_wayland = false
 config.front_end = "WebGpu"

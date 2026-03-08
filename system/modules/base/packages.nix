@@ -12,13 +12,16 @@
     wirelesstools
     busybox
     libGL
+    neovim-unwrapped
   ];
 
+  environment.variables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+    SUDO_EDITOR = "nvim";
+  };
+
   programs = {
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-    };
     firefox.enable = false;
     gnome-disks.enable = true;
     git = {
