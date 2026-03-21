@@ -1,0 +1,5 @@
+# Inherit everything from your main config
+"__include__" = "~/.config/starship.toml"
+
+# Override just the newline setting
+add_newline = false
