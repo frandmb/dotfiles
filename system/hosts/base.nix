@@ -93,6 +93,7 @@
     enable = true;
     binfmt = true;
   };
+  fonts.fontconfig.enable = true;
   services = {
     pipewire = {
       enable = true;
