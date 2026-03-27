@@ -18,7 +18,6 @@
     nixos-hardware = {
       url = "github:nixos/nixos-hardware/master";
     };
-    nixpkgs-nvidia.url = "github:NixOS/nixpkgs/ab9ad415916a0fb89d1f539a9291d9737e95148e";
     # nixos-unstable-small = {
     #   url = "github:nixos/nixpkgs/nixos-unstable-small";
     # };
