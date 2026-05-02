@@ -66,18 +66,18 @@ wezterm.on("window-focus-changed", function(window, pane)
 end)
 -- #endregion
 
--- resurrect.state_manager.periodic_save({
--- 	interval_seconds = 300,
--- 	save_workspaces = true,
--- 	save_windows = true,
--- 	save_tabs = true,
--- })
---
--- wezterm.on("gui-startup", function()
--- 	resurrect.state_manager.resurrect_on_gui_startup()
--- end)
--- resurrect.state_manager.set_max_nlines(10)
---
+resurrect.state_manager.periodic_save({
+	interval_seconds = 300,
+	save_workspaces = true,
+	save_windows = true,
+	save_tabs = true,
+})
+
+wezterm.on("gui-startup", function()
+	resurrect.state_manager.resurrect_on_gui_startup()
+end)
+resurrect.state_manager.set_max_nlines(10)
+
 config.keys = {
 	{
 		mods = "CTRL",
@@ -87,6 +87,14 @@ config.keys = {
 
 	{ key = "{", mods = "SHIFT|ALT", action = wezterm.action.MoveTabRelative(-1) },
 	{ key = "}", mods = "SHIFT|ALT", action = wezterm.action.MoveTabRelative(1) },
+
+	{
+		key = "Backspace",
+		mods = "CTRL",
+		action = wezterm.action.SendKey({ key = "w", mods = "CTRL" }),
+		-- OR send Alt+Backspace (common in bash):
+		-- action = wezterm.action.SendKey({ key = "Backspace", mods = "ALT" }),
+	},
 
 	--#region resurrect
 	{
