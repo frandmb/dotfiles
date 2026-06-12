@@ -18,6 +18,13 @@ return {
             },
           },
         },
+        unocss = {
+          on_init = function(client)
+            if client.server_capabilities then
+              client.server_capabilities.colorProvider = false
+            end
+          end,
+        },
         denols = {
           mason = false,
           root_dir = require("lspconfig").util.root_pattern({ "deno.json", "deno.jsonc" }),
@@ -44,15 +51,10 @@ return {
       },
       setup = {
         eslint = function()
-          require("lazyvim.util").lsp.on_attach(function(client)
+          Snacks.util.lsp.on({}, function(_, client)
             if client.name == "eslint" then
               client.server_capabilities.documentFormattingProvider = true
-            elseif
-              client.name == "vtsls"
-              or client.name == "vue_ls"
-              or client.name == "volar"
-              or client.name == "tsserver"
-            then
+            elseif vim.tbl_contains({ "vtsls", "vue_ls", "volar", "tsserver", "oxfmt" }, client.name) then
               client.server_capabilities.documentFormattingProvider = false
             end
           end)

@@ -14,14 +14,6 @@ return {
     },
   },
   {
-    "nvim-mini/mini.indentscope",
-    opts = {
-      draw = {
-        animation = require("mini.indentscope").gen_animation.none(),
-      },
-    },
-  },
-  {
     "nvim-lualine/lualine.nvim",
     opts = {
       sections = {

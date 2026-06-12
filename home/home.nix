@@ -46,6 +46,7 @@ in {
         starship_precmd_user_func="set_win_title"'';
     };
     home-manager.enable = true;
+    mpv.enable = true;
   };
 
   services = {
