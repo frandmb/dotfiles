@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "configurations": [
+    {
+      "id": "profile_1772235788158_ojhjmw",
+      "name": "Default",
+      "outputs": {
+        "Samsung Electric Company Odyssey G81SF HNAY500146": {
+          "mode": "3840x2160@119.880",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": 1.5,
+          "transform": "Normal",
+          "vrr": true,
+          "disabled": false,
+          "niri": {
+            "focusAtStartup": true,
+            "hotCorners": {
+              "off": true
+            }
+          }
+        }
+      }
+    }
+  ]
+}
