@@ -105,7 +105,6 @@
     printing.enable = true;
     libinput.enable = true;
     fwupd.enable = true;
-    tailscale.enable = true;
   };
 
   # Storage optimization
