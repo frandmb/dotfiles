@@ -4,7 +4,7 @@
     substituters = [
       "https://nix-community.cachix.org"
       "https://cache.nixos.org"
-      "https://cuda-maintainers.cachix.org"
+      "https://cache.nixos-cuda.org"
     ];
   };
   inputs = {

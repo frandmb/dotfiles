@@ -20,7 +20,7 @@ in {
     (pkgs.writeShellScriptBin "nvidia-cdi-setup" ''
       export LD_LIBRARY_PATH="/run/opengl-driver/lib:$LD_LIBRARY_PATH"
       export XDG_DATA_DIRS="/run/opengl-driver/share:$XDG_DATA_DIRS"
-      export VK_DRIVER_FILES="/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json"
+      export VK_DRIVER_FILES="/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.json"
       exec nvidia-ctk cdi generate --nvidia-cdi-hook-path=${cdiHookPath} "$@"
     '')
   ];
